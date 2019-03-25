@@ -1,0 +1,32 @@
+DEPENDENCIES
+  application
+    path: cookbooks/application
+  nginx
+  sap-runit
+  ssl_certificate
+
+GRAPH
+  application (1.0.0)
+    nginx (>= 0.0.0)
+  apt (2.9.2)
+  bluepill (2.4.1)
+    rsyslog (~> 2.0)
+  build-essential (2.2.4)
+  nginx (2.7.6)
+    apt (~> 2.2)
+    bluepill (~> 2.3)
+    build-essential (~> 2.0)
+    ohai (~> 2.0)
+    runit (~> 1.2)
+    yum-epel (~> 0.3)
+  ohai (2.0.4)
+  packagecloud (0.1.1)
+  rsyslog (2.2.0)
+  runit (1.7.6)
+    packagecloud (>= 0.0.0)
+  sap-runit (1.1.5)
+    runit (>= 1.0.0)
+  ssl_certificate (1.12.0)
+  yum (3.9.0)
+  yum-epel (0.6.5)
+    yum (~> 3.2)
